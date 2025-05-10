@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') %> 
+<body style="font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #2c3e50;">
+
+ 
+  <div style="background-color: #2C3E50; padding: 40px; text-align: center; color: white;">
+    <h1 style="margin: 0; font-size: 42px;">Create a New G-Shock Listing</h1>
+    <p style="font-size: 18px; margin-top: 10px;">Fill out the form below to add a new watch listing</p>
+  </div>
+ 
+  <div style="max-width: 600px; margin: 40px auto; padding: 30px; background-color: white; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+    <form method="POST" action="/listings" style="display: flex; flex-direction: column; gap: 20px;">
+      <input name="listing[Category]" placeholder="Enter Category" type="text" required
+             style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+             
+      <textarea name="listing[Description]" placeholder="Enter Description" rows="4" required
+                style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+
+      <input name="listing[Brand]" placeholder="Enter Brand" type="text" required
+             style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+
+      <input name="listing[image][url]" placeholder="Enter Image URL/Link" type="text" required
+             style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+
+      <input name="listing[Price]" placeholder="Enter Price" type="number" required
+             style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+
+      <input name="listing[Strap_Type]" placeholder="Enter Strap Type" type="text" required
+             style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+
+      <input name="listing[Warranty]" placeholder="Enter Warranty" type="text" required
+             style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+
+      <button type="submit"
+              style="padding: 14px; font-size: 18px; font-weight: bold; color: white; background-color: #E74C3C; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
+        Add Listing
+      </button>
+    </form>
+  </div>
+
+ 
+  <div style="text-align: center; padding: 30px; background-color: #2C3E50; color: white;">
+    <p style="margin: 0; font-size: 14px;">&copy; 2025 G-Shock Listings. All rights reserved.</p>
+  </div>
+
+</body>
+ 

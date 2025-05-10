@@ -1,0 +1,21 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+    <h3>Listing Details: </h3>
+    <ul>
+        <li><%= listing.Category %></li>
+        <li><%= listing.Description %></li>
+        <li><%= listing.Brand %></li>
+        <li>&#8377;<%= listing.Price.toLocaleString("en-IN") %></li>
+        <li><%= listing.Strap_Type %></li>
+        <li><%= listing.Warranty%></li>
+        <li><%= listing.Availability %></li> 
+    </ul>
+    <br><br>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+        <button>Delete this Watch</button>
+    </form>
+      
+      
+</body>
+ 
